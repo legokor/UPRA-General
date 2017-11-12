@@ -10126,6 +10126,10 @@ National Semiconductor Z03A</description>
 <rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 </package>
+<package name="BATTERY_PLACEHOLDER">
+<pad name="P$1" x="-1.27" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="1.27" y="0" drill="0.8" shape="square"/>
+</package>
 </packages>
 <symbols>
 <symbol name="UPRA-BUS-2X20">
@@ -13019,6 +13023,13 @@ National Semiconductor Z03A</description>
 <vertex x="-1.905" y="-1.27"/>
 </polygon>
 </symbol>
+<symbol name="AAA">
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<text x="-7.62" y="5.08" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<pin name="-" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="+" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="UPRA-BUS-2X20" prefix="JP" uservalue="yes">
@@ -14127,6 +14138,26 @@ Pinout and footprint are the same for both &lt;b&gt;RFM-12B&lt;/b&gt; and &lt;b&
 <connect gate="A" pin="A" pad="2"/>
 <connect gate="A" pin="J" pad="1"/>
 <connect gate="A" pin="K" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BATTERY" prefix="BATT">
+<description>&lt;b&gt;AAA PC pin holder&lt;/b&gt;
+&lt;p&gt;
+Mouser part #12BH412 - but pretty much any 1x AAA battery holder should be the same 
+&lt;p&gt;http://www.ladyada.net/library/pcb/eaglelibrary.html&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="AAA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-PLACEHOLDER" package="BATTERY_PLACEHOLDER">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1"/>
+<connect gate="G$1" pin="-" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
