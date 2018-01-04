@@ -13,8 +13,10 @@ This is for the UPRA Arduino environment. Contains the proper bootloaders and mo
 1. Open preferences: File->Preferences
 2. Make sure the following checkboxes are checked:
 
-   * Show verbose output during: [x] compilation  [x] upload
+   Show verbose output during: [x] compilation  [x] upload
    * [x] Display line numbers
    * [x] Verify code after upload
    * [x] Save when verifying or upload
+   
+   ![Arduino IDE Preferences](screenshots/preferences.png "Make sure these boxes are checked")
 3. Save by click on __OK__
